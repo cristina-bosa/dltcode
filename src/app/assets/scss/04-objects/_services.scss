@@ -7,10 +7,19 @@
   display: flex;
   flex-direction: column;
   gap: spaces.$gap;
+  margin-top: 3rem;
+  height: auto;
+
+  h2 {
+    font-size: 1.5rem;
+    width: 30ch;
+    font-weight: 700;
+    color: variables.$primary-color;
+  }
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));   
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: spaces.$gap;
 
     @include querys.mobile {
@@ -20,20 +29,51 @@
 
   &__item {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
     padding: spaces.$padding-vertical spaces.$padding-horizontal;
     background-color: variables.$background-color-light;
     gap: spaces.$gap;
     cursor: pointer;
+    height: 5rem;
+
+    &__header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: spaces.$gap;
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        align-items: flex-start;
+      }
+
+      svg {
+        align-self: flex-end;
+      }
+
+      gap: spaces.$gap;
+
+    }
+
     @include querys.mobile {
       flex-direction: row;
     }
-    &--active{
+
+    &--active {
       background-color: variables.$primary-color-darker;
       color: variables.$text-light;
-      svg{
+      height: auto;
+      min-height: 200px;
+        h3 {
+          font-size: 1.2rem;
+          font-weight: 700;
+        }
+      svg {
         stroke: variables.$text-light;
       }
     }

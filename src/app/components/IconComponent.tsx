@@ -1,5 +1,5 @@
 import React from 'react';
-import * as Icons from 'react-icons/fi';
+import * as Icons from 'react-icons/lu';
 
 const IconComponent = ({ iconName, size = '24px', color = 'black', ...props }) => {
   const IconComponent = Icons[iconName];

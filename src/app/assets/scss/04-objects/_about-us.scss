@@ -7,14 +7,29 @@
   display: flex;
   align-items: center;
   flex-direction: row;
+  justify-content: space-between;
   gap: spaces.$gap;
+
   @include querys.mobile {
     flex-direction: column;
   }
+
   &__information {
     display: flex;
     flex-direction: column;
     gap: spaces.$gap;
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      width: 20ch;
+      color: variables.$primary-color;
+    }
+
+    p {
+      width: 55ch;
+      line-height: 1.5;
+    }
   }
 
   &__image {
@@ -23,7 +38,8 @@
     }
   }
 }
-.icon{
+
+.icon {
   width: 50px;
   height: 50px;
   fill: red;
