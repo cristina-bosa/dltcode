@@ -35,6 +35,7 @@ export const data = {
         '#3A78BB',
         '#538DCA',
         '#82ACD9',
+        '#A1C1E2'
       ],
     },
   ],

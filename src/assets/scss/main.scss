@@ -1,0 +1,36 @@
+@use '00-settings/colors';
+@use '00-settings/typography';
+
+@use '01-tools/mixins';
+
+@use '02-generic/normalize';
+
+@use '03-elements/boxsizing';
+@use '03-elements/ui-ahref';
+
+@use '04-objects/layout';
+@use '04-objects/about-us';
+@use '04-objects/services';
+@use '04-objects/products';
+@use '04-objects/banner';
+@use '04-objects/chart';
+@use '04-objects/legend';
+@use '04-objects/footer';
+
+@use '05-components/navbar';
+@use '05-components/button';
+
+@use '06-utilities/utilities';
+
+*,
+*::after,
+*::before {
+  font-size: 16px; 
+}
+p{
+  line-height: 1.2;
+
+}
+body {
+  background-color: colors.$background-color;
+}

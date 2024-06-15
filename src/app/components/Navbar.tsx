@@ -4,17 +4,23 @@ const Navbar = () => {
   return (
 
     <header className="navbar">
-      <Image src="/logo.svg" alt="DLT Code" className="navbar__brand" width={100} height={100} />
+      <Image src="/logo.svg" alt="DLT Code" className="navbar__brand" width={150} height={150} />
       <nav >
         <ul className="navbar__menu">
           <li className="navbar__item">
-            <Link href="/">Nosotros</Link>
+            <Link href="/#about-us">Sobre nosotros</Link>
           </li>
           <li className="navbar__item">
-            <Link href="/about">Servicios</Link>
+            <Link href="/#services">Servicios</Link>
           </li>
           <li className="navbar__item">
-            <Link href="/contact">Productos</Link>
+            <Link href="/#products">Productos</Link>
+          </li>
+          <li className="navbar__item">
+            <Link href="/">Protección</Link>
+          </li>
+          <li className="navbar__item">
+            <Link href="/">Herramientas</Link>
           </li>
         </ul>
       </nav>

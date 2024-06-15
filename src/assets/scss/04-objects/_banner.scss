@@ -1,0 +1,71 @@
+@use '../00-settings/variables';
+@use '../01-tools/mixins' as mix;
+@use '../01-tools/querys' as querys;
+@use '../01-tools/spaces' as spaces;
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  gap: spaces.$gap;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+  background-image: url('../../images/banner.png');  
+  background-size: cover;  
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 4rem;
+
+  &__content {    
+    display: flex;
+    flex-direction: row;    
+    align-items: center;
+
+    gap: spaces.$gap;
+    @include mix.lg;
+    @include querys.mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__information {
+    display: flex;
+    flex-direction: column;
+    gap: spaces.$gap;
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      width: 30ch;
+      color: variables.$text-light;
+
+      @include querys.mobile {
+        width: auto;
+      }
+    }
+
+    p {
+      width: 60ch;
+      line-height: 1.5;
+      color: variables.$text-light;
+
+      @include querys.mobile {
+        width: auto;
+      }
+    }
+  }
+
+  &__list {
+    h4 {
+      color: variables.$text-light;
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: spaces.$gap;
+
+    @include querys.mobile {
+      flex-direction: column;
+    }
+  }
+}

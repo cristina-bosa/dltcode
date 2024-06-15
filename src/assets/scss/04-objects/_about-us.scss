@@ -1,0 +1,54 @@
+@use '../00-settings/variables';
+@use '../01-tools/mixins' as mix;
+@use '../01-tools/querys' as querys;
+@use '../01-tools/spaces' as spaces;
+
+.about-us {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: spaces.$gap;
+  @include mix.lg;
+  &__information {
+    display: flex;
+    flex-direction: column;
+    gap: spaces.$gap;
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      width: 20ch;
+      color: variables.$primary-color;
+
+      @include querys.mobile {        
+        width: auto;
+      }
+    }
+
+    p {
+      width: 55ch;
+      line-height: 1.5;
+
+      @include querys.mobile {        
+        width: auto;
+      }
+    }
+  }
+
+  &__image {
+    img {
+      object-fit: cover;
+    }
+
+    @include querys.mobile {
+      display: none;
+    }
+  }
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  fill: red;
+}

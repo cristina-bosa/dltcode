@@ -1,0 +1,53 @@
+@use '../00-settings/variables';
+@use '../01-tools/mixins' as mix;
+@use '../01-tools/querys' as querys;
+@use '../01-tools/spaces' as spaces;
+
+.chart{
+  display: flex;
+  flex-direction: row;
+  gap: spaces.$gap;
+  justify-content: space-between;
+  
+  @include mix.lg;
+  @include querys.mobile{
+    flex-direction: column;
+  }
+  &__content{
+    margin-top: 8rem;
+    display: flex;     
+    flex-direction: column;
+    gap: spaces.$gap;
+    h2{
+      font-size: 2rem;      
+      font-weight: 700;
+      color: variables.$primary-color;    
+      @include querys.mobile {        
+        width: auto;
+      }
+    }
+    p{
+      line-height: 1.5;
+      width: 50ch;
+      @include querys.mobile {        
+        width: auto;
+      }
+    }
+  }
+  &__chart{
+    canvas{
+      width: 100%;
+      height: 100%;
+    }
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__legend{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: .5rem;
+  }
+}

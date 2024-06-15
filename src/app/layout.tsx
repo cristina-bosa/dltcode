@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "scss/main.scss";
+import "@/assets/scss/main.scss";
 
 const inter = Inter({
   weight: "500",

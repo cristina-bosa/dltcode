@@ -12,21 +12,25 @@ const ServiceItem = ({ title, iconDown, iconUp, content }) => {
   return (
     <motion.article
       layout
-
-      className={isActive === true ? "services__item services__item--active" : "services__item"} onClick={handleToggle}>
+      className={isActive === true ? "services__item services__item--active" : "services__item"}
+      transition={{ duration: 0.5 }}
+      initial={false}
+      onClick={handleToggle}>
       <motion.section layout='position' className="services__item__header">
         <motion.h3 layout='position' >{title}</motion.h3>
         {!isActive && (<IconComponent iconName={iconDown} color="black" />)}
 
       </motion.section>
-
-      {isActive && (
-        <motion.section className="services__item__body">
-          <motion.p layout='position'>{content}</motion.p>
-          <IconComponent iconName={iconUp} color="black" />
-        </motion.section>
-
-      )}
+      <motion.section
+        transition={{ duration: 0.5 }}
+        className="services__item__body">
+        {isActive && (
+          <>
+            <motion.p layout='position'>{content}</motion.p>
+            <IconComponent iconName={iconUp} color="black" />
+          </>
+        )}
+      </motion.section>
     </motion.article>
   );
 }

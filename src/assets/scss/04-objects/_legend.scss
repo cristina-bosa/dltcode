@@ -1,0 +1,15 @@
+@use '../00-settings/variables';
+@use '../01-tools/mixins' as mix;
+@use '../01-tools/querys' as querys;
+@use '../01-tools/spaces' as spaces;
+
+.legend{
+  display: flex;
+  flex-direction: row;
+  gap: .5rem;
+  align-items: top;
+  &__content{
+    display: flex;
+    flex-direction: column;    
+  }
+}

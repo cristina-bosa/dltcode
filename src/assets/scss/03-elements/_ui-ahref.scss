@@ -1,0 +1,11 @@
+@use '../00-settings/variables';
+
+a {
+  color: variables.$text-color;
+  text-decoration: none;
+
+  &:hover {
+    color: variables.$text-color-primary;
+
+  }
+}

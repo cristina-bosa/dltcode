@@ -1,0 +1,56 @@
+@use '../00-settings/variables';
+@use '../01-tools/mixins' as mix;
+@use '../01-tools/querys' as querys;
+@use '../01-tools/spaces' as spaces;
+
+.footer{  
+  display: flex;
+  gap: spaces.$gap;
+  margin-top: 8rem;  
+  justify-content: center;
+  align-items: center;
+  padding: spaces.$padding-vertical spaces.$padding-horizontal;
+  background-color: variables.$primary-color; 
+  p{
+    color: variables.$text-light;
+    font-size: .7rem;
+  }
+  &__content{
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    gap: spaces.$gap;
+    color: variables.$text-light;
+    justify-content: space-between;
+    &__contact{
+      display: flex;
+      flex-direction: row;
+      gap: spaces.$gap;
+      align-items: center;
+      a{
+        color: variables.$text-light;
+        text-decoration: none;
+        &:hover{
+          text-decoration: underline;
+        }
+      
+      }
+    }
+    &__policy{
+      display: flex;
+      flex-direction: row;
+      gap: .5rem;
+      a{
+        color: variables.$text-light;        
+        font-size: .7rem;
+        text-decoration: none;
+        &:hover{
+          text-decoration: underline;
+        }
+        
+      }
+    }
+  }
+}

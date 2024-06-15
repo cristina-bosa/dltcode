@@ -1,0 +1,10 @@
+@use '../00-settings/variables';
+@use './querys' as querys;
+
+@mixin lg {
+  margin: 0 auto;
+  max-width: 1200px;
+  @include querys.mobile {    
+    margin: 0 1.5rem;
+  }
+}

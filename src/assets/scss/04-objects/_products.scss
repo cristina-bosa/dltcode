@@ -1,0 +1,70 @@
+@use '../00-settings/variables';
+@use '../01-tools/mixins' as mix;
+@use '../01-tools/querys' as querys;
+@use '../01-tools/spaces' as spaces;
+
+.products{
+  display: flex;
+  flex-direction: column;
+  gap: spaces.$gap;
+  margin-top: 8rem;
+  @include mix.lg;
+  h2{
+    font-size: 1.5rem;
+    width: 30ch;
+    font-weight: 700;
+    color: variables.$primary-color;
+    @include querys.mobile {        
+      width: auto;
+    }
+  }
+  &__list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;   
+    gap: spaces.$gap;
+
+    @include querys.mobile{
+      flex-direction: column;
+    }
+
+  }
+  &__item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: spaces.$padding-vertical spaces.$padding-horizontal;
+    background-color: variables.$background-color-light;
+    gap: spaces.$gap;    
+    @include querys.mobile{
+      flex-direction: column;
+    }
+    &__image{
+      width: 135px;      
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      @include querys.mobile {        
+        width: auto;
+      }
+    }
+    &__content{
+      flex: 5;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: spaces.$gap;
+      &__header{
+        display: flex;
+        flex-direction: column;
+        gap: spaces.$gap;
+      }
+      &__footer{
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+}

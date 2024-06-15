@@ -28,8 +28,11 @@
       "components/*": [
         "./src/app/components/*"
       ],
+      "hooks":[
+        "./src/app/hooks"
+      ],
       "scss/*":[
-        "./src/app/assets/scss/*"
+        "./src/assets/*"
       ],
       
     },
