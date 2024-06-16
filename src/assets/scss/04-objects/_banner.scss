@@ -9,19 +9,20 @@
   gap: spaces.$gap;
   margin-top: 8rem;
   margin-bottom: 8rem;
-  background-image: url('../../images/banner.png');  
-  background-size: cover;  
+  background-image: url('../../images/banner.png');
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 4rem;
 
-  &__content {    
+  &__content {
     display: flex;
-    flex-direction: row;    
+    flex-direction: row;
     align-items: center;
 
     gap: spaces.$gap;
     @include mix.lg;
+
     @include querys.mobile {
       flex-direction: column;
     }
@@ -58,7 +59,7 @@
     h4 {
       color: variables.$text-light;
     }
-
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -66,6 +67,46 @@
 
     @include querys.mobile {
       flex-direction: column;
+    }
+  }
+  
+  &__item {
+    display: flex;
+    flex-direction: row;
+    gap: spaces.$gap;
+    justify-content: space-between;
+    padding: spaces.$padding-vertical spaces.$padding-horizontal;
+    background-color: variables.$background-color-light;
+    border-radius: 1rem;
+    cursor: pointer;    
+    width: 100%;    
+
+
+    &--active {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      gap: spaces.$gap;
+      justify-content: space-between;
+      padding: spaces.$padding-vertical spaces.$padding-horizontal;
+      background-color: variables.$secondary-color;
+      border-radius: 1rem;
+      cursor: pointer;    
+      
+      z-index: 1;
+      top: 0;
+      left: 0;
+      right: 0;    
+      color: variables.$text-color;            
+
+    
+      &__icon{
+        border-radius: 50%;
+        background-color: darken(variables.$secondary-color, 15%);        
+        padding: .4rem;
+        border-radius: 50%;
+        align-self: flex-end;    
+      }
     }
   }
 }

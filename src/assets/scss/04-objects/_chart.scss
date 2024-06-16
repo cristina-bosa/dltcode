@@ -8,6 +8,7 @@
   flex-direction: row;
   gap: spaces.$gap;
   justify-content: space-between;
+  align-items: flex-end;
   
   @include mix.lg;
   @include querys.mobile{
@@ -35,10 +36,8 @@
     }
   }
   &__chart{
-    canvas{
-      width: 100%;
-      height: 100%;
-    }
+    width: 30rem;
+    height: 30rem;
     flex: 1;
     display: flex;
     justify-content: center;

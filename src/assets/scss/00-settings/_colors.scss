@@ -1,7 +1,7 @@
 $_seasalt: hsl(210, 12%, 97%);
 
 $_zaffre: hsl(206, 99%, 27%); // --> primary-color
-$_esmerald: hsl(206, 99%, 27%);
+$_esmerald: hsl(36, 80%, 67%);
 
 $_night: hsl(0, 0%, 8%);
 
@@ -14,11 +14,7 @@ $primary-color: $_zaffre;
 $primary-color-light: hsl(206, 44%, 46%);
 $primary-color-lighter: hsl(206, 37%, 64%);
 
-$secondary-color-darker: hsl(145, 71%, 10%);
-$secondary-color-dark: hsl(145, 71%, 30%);
 $secondary-color: $_esmerald;
-$secondary-color-light: hsl(145, 71%, 60%);
-$secondary-color-lighter: hsl(145, 71%, 80%);
 
 $background-color: $_seasalt;
 $background-color-light: hsl(0, 0%, 100%);

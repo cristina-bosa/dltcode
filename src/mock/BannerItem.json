@@ -1,0 +1,23 @@
+[
+  {
+    "id": "b-1",
+    "title": "Profesionales expertos",
+    "description": "Nuestros equipos de seguridad participan como instructores en la C1b3rWall Academy, cubriendo áreas como pentesting, forense, Hacking de vehículos y más.",
+    "iconUp":"LuArrowDownRight",
+    "iconDown": "LuArrowUpLeft"
+  },
+  {
+    "id": "b-2",
+    "title": "Reconocimientos",
+    "description": "Hemos tenido el honor de clausurar eventos de prestigio como CiberSeguridad 2020 BARCELONA de IDG/Computerworld, lo que refleja nuestro compromiso y excelencia en seguridad cibernética.",
+    "iconUp":"LuArrowDownRight",
+    "iconDown": "LuArrowUpLeft"
+  },
+  {
+    "id": "b-3",
+    "title": "Participación internacional",
+    "description": "Este año, estamos programados como ponentes invitados en eventos de gran importancia como EUROPOL y QuBit Praga, donde compartiremos nuestro conocimiento y experiencia en seguridad.",
+    "iconUp":"LuArrowDownRight",
+    "iconDown": "LuArrowUpLeft"
+  }
+]

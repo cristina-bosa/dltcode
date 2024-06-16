@@ -1,8 +1,6 @@
 import React from 'react';
-import { Chart as ChartJS, ArcElement, Tooltip, Legend, plugins } from 'chart.js';
-import { Doughnut } from 'react-chartjs-2';
-import { fontString } from 'chart.js/helpers';
-import { text } from 'stream/consumers';
+import {ArcElement, Chart as ChartJS, Legend, Tooltip} from 'chart.js';
+import {Doughnut} from 'react-chartjs-2';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -41,6 +39,8 @@ export const data = {
   ],
 };
 export const options = {
+  responsive: true,
+  maintainAspectRatio: false,
   plugins: {
     legend: {
       display: false,
@@ -53,10 +53,8 @@ export const options = {
           return context.parsed + '%';
         },
       },
-    }
-  },
-
-  responsive: true,
+    }, 
+  }  
 }
 const Chart = () => {
   return <Doughnut data={data} options={options} />;

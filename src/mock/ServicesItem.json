@@ -1,0 +1,30 @@
+[
+  {
+    "id": "s-1",
+    "title": "Hacking & SOC",
+    "description": "Auditoria, adedecuación, consultoría, análisis de riesgo, normativa y cumplimiento, gestión y administración, análisis, monitorización",
+    "iconUp":"LuArrowDownRight",
+    "iconDown": "LuArrowUpLeft"
+  },
+  {
+    "id": "s-2",
+    "title": "Forense",
+    "description": "Análisis Forense, consultoria, incident response, e-discovery, audio/video, whatsapp, email, industrial",
+    "iconUp":"LuArrowDownRight",
+    "iconDown": "LuArrowUpLeft"
+  },
+  {
+    "id": "s-3",
+    "title": "Recuperación de datos",
+    "description": "Moviles, ordenadores, sistemas RAID, servidores, tarjetas de memoria, SCADA",
+    "iconUp":"LuArrowDownRight",
+    "iconDown": "LuArrowUpLeft"
+  },
+  {
+    "id": "s-4",
+    "title": "Blockchain",
+    "description": "Auditoría, consultoría, adecuación, normativa y cumplimiento, ERC-20, CCI framework, Trust over IP primer",
+    "iconUp":"LuArrowDownRight",
+    "iconDown": "LuArrowUpLeft"
+  }
+]

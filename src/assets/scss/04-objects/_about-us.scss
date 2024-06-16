@@ -39,6 +39,7 @@
   &__image {
     img {
       object-fit: cover;
+      border-radius: 1rem;;
     }
 
     @include querys.mobile {

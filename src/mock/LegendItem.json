@@ -1,0 +1,50 @@
+[
+  {
+    "id": "l-1",
+    "title": "Acceso no autorizado",
+    "percentage": "37.94",
+    "color": "#0D1B2A"
+  },
+  {
+    "id": "l-2",
+    "title": "Fraude",
+    "percentage": "23.90",
+    "color": "#13283E"
+  },
+  {
+    "id": "l-3",
+    "title": "Virus y sypware",
+    "percentage": "9.76",
+    "color": "#1D3C5E"
+  },
+  {
+    "id": "l-4",
+    "title": "Spam",
+    "percentage": "5.62",
+    "color": "#26507D"
+  },
+  {
+    "id": "l-5",
+    "title": "Otros",
+    "percentage": "15.54",
+    "color": "#3A78BB"
+  },
+  {
+    "id": "l-6",
+    "title": "Denegación de servicios",
+    "percentage": "4.41",
+    "color": "#538DCA"
+  },
+  {
+    "id": "l-7",
+    "title": "Escaneos de red",
+    "percentage": "2.38",
+    "color": "#82ACD9"
+  },
+  {
+    "id": "l-8",
+    "title": "Robo de información",
+    "percentage": "0.45",
+    "color": "#A1C1E2"
+  }
+]

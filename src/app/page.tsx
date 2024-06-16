@@ -4,12 +4,20 @@ import Navbar from 'components/Navbar';
 import Footer from 'components/Footer';
 import ServiceItem from "components/ServiceItem";
 import ProductItem from "components/ProductItem";
+import BannerItem from "components/BannerItem";
 import Chart from "components/Chart";
 import Legend from "components/Legend";
 import { motion } from "framer-motion"
+import BannerData from '@/mock/BannerItem.json'
+import ServicesData from '@/mock/ServicesItem.json'
+import LegendData from '@/mock/LegendItem.json'
+import { useState } from "react";
 
 const Home = () => {
-
+  const bannerData = BannerData;
+  const servicesData = ServicesData;
+  const legendData = LegendData;
+  const [isActive, setIsActive] = useState(null);
   const sectionVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0 },
@@ -25,7 +33,7 @@ const Home = () => {
           initial="hidden"
           whileInView="visible"
           variants={sectionVariants}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.4 }}
           viewport={{ once: false }}
           className="about-us"
         >
@@ -45,35 +53,23 @@ const Home = () => {
           initial="hidden"
           whileInView="visible"
           variants={sectionVariants}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition={{ duration: 0.4, delay: 0.4 }}
           viewport={{ once: false }}
           className="services">
           <h2>Servicios</h2>
           <section className="services__list">
-            <ServiceItem
-              title="Hacking & SOC"
-              iconDown="LuArrowDownRight"
-              iconUp="LuArrowUpLeft"
-              content="Auditoria, adedecuación, consultoría, análisis de riesgo, normativa y cumplimiento, gestión y administración, análisis, monitorización"
-            />
-            <ServiceItem
-              title="Forense"
-              iconDown="LuArrowDownRight"
-              iconUp="LuArrowUpLeft"
-              content="Análisis Forense, consultoria, incident response, e-discovery, audio/video, whatsapp, email, industrial"
-            />
-            <ServiceItem
-              title="Recuperación de datos"
-              iconDown="LuArrowDownRight"
-              iconUp="LuArrowUpLeft"
-              content="Moviles, ordenadores, sistemas RAID, servidores, tarjetas de memoria, SCADA"
-            />
-            <ServiceItem
-              title="Blockchain"
-              iconDown="LuArrowDownRight"
-              iconUp="LuArrowUpLeft"
-              content="Auditoría, consultoría, adecuación, normativa y cumplimiento, ERC-20, CCI framework, Trust over IP primer"
-            />
+            {servicesData.map((service) => {
+              return (
+                <ServiceItem
+                  key={service.id}
+                  id={service.id}
+                  title={service.title}
+                  iconDown={service.iconDown}
+                  iconUp={service.iconUp}
+                  description={service.description}
+                />
+              )
+            })}
           </section>
         </motion.section>
 
@@ -81,7 +77,7 @@ const Home = () => {
           initial="hidden"
           whileInView="visible"
           variants={sectionVariants}
-          transition={{ duration: 0.5, delay: 0.5 }}
+          transition={{ duration: 0.4, delay: 0.6 }}
           viewport={{ once: false }}
           className="banner">
           <section className="banner__content">
@@ -91,24 +87,18 @@ const Home = () => {
             </section>
             <section className="banner__list">
               <h4>Destacamos</h4>
-              <ServiceItem
-                title="Profesionales expertos"
-                iconDown="LuArrowDownRight"
-                iconUp="LuArrowUpLeft"
-                content="Nuestros equipos de seguridad participan como instructores en la C1b3rWall Academy, cubriendo áreas como pentesting, forense, Hacking de vehículos y más."
-              />
-              <ServiceItem
-                title="Reconocimientos"
-                iconDown="LuArrowDownRight"
-                iconUp="LuArrowUpLeft"
-                content="Hemos tenido el honor de clausurar eventos de prestigio como CiberSeguridad 2020 BARCELONA de IDG/Computerworld, lo que refleja nuestro compromiso y excelencia en seguridad cibernética."
-              />
-              <ServiceItem
-                title="Participación internacional"
-                iconDown="LuArrowDownRight"
-                iconUp="LuArrowUpLeft"
-                content="Este año, estamos programados como ponentes invitados en eventos de gran importancia como EUROPOL y QuBit Praga, donde compartiremos nuestro conocimiento y experiencia en seguridad"
-              />
+              {bannerData.map((banner) => {
+                return (
+                  <BannerItem
+                    key={banner.id}
+                    id={banner.id}
+                    title={banner.title}
+                    iconDown={banner.iconDown}
+                    iconUp={banner.iconUp}
+                    description={banner.description}
+                  />
+                );
+              })}
             </section>
           </section>
         </motion.section>
@@ -117,7 +107,7 @@ const Home = () => {
           initial="hidden"
           whileInView="visible"
           variants={sectionVariants}
-          transition={{ duration: 0.5, delay: 0.6 }}
+          transition={{ duration: 0.4, delay: 0.8 }}
           viewport={{ once: false }}
           className="products">
           <h2>Productos</h2>
@@ -137,7 +127,7 @@ const Home = () => {
           initial="hidden"
           whileInView="visible"
           variants={sectionVariants}
-          transition={{ duration: 0.5, delay: 0.8 }}
+          transition={{ duration: 0.4, delay: 0.10 }}
           viewport={{ once: false }}
           className="chart">
           <section className="chart__content">
@@ -145,46 +135,16 @@ const Home = () => {
             <p>La ciberseguridad es una prioridad para nosotros.</p>
             <p>Nuestro equipo de expertos en seguridad cibernética se dedica a proteger tu empresa de amenazas digitales y garantizar la continuidad de tu negocio.</p>
             <section className="chart__legend">
-              <Legend
-                title="Acceso no autorizado"
-                percentage="37.94"
-                color="#0D1B2A"
-              />
-              <Legend
-                title="Fraude"
-                percentage="23.90"
-                color="#13283E"
-              />
-              <Legend
-                title="Virus y spyware"
-                percentage="9.76"
-                color="#1D3C5E"
-              />
-              <Legend
-                title="Spam"
-                percentage="5.62"
-                color="#26507D"
-              />
-              <Legend
-                title="Otros"
-                percentage="15.54"
-                color="#3A78BB"
-              />
-              <Legend
-                title="Denegación de servicio"
-                percentage="4.41"
-                color="#538DCA"
-              />
-              <Legend
-                title="Escaneos de red"
-                percentage="2.38"
-                color="#82ACD9"
-              />
-              <Legend
-                title="Robo de información"
-                percentage="0.45"
-                color="#A1C1E2"
-              />
+              {legendData.map((legend) => {
+                return (
+                  <Legend
+                    key={legend.id}
+                    title={legend.title}
+                    percentage={legend.percentage}
+                    color={legend.color}
+                  />
+                );
+              })}
             </section>
           </section>
           <section className="chart__chart">
